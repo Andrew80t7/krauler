@@ -1,16 +1,29 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import asyncio
+from telegram_api.client import get_client
+from telegram_api.search import search_channels
+from telegram_api.downloader import process_channel
+from config import load_config
+from logger import setup_logging
+from db import init_db
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+async def main_async():
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    setup_logging()
+    config = load_config('config.json')
+    init_db()
+
+    client = await get_client(config)
+
+    keyword = "tech"
+    channels = await search_channels(client, keyword, limit=500)
+
+    for channel in channels:
+        print(channel.username)
+        asyncio.create_task(process_channel(client, channel.username))
+
+    await client.run_until_disconnected()
+
+
+if __name__ == "__main__":
+    asyncio.run(main_async())
