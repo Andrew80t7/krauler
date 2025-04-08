@@ -1,0 +1,59 @@
+2025-04-08 10:57:22,125 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-04-08 10:57:23,725 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-04-08 10:57:38,402 - telegram - INFO - Добавлен канал: @yurasumy
+2025-04-08 10:57:38,511 - telegram - INFO - Добавлен канал: @rybar
+2025-04-08 10:57:38,622 - telegram - INFO - Добавлен канал: @voenacher
+2025-04-08 10:57:38,734 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-04-08 10:57:38,844 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-04-08 10:57:38,930 - telegram - INFO - Добавлен канал: @warfakes
+2025-04-08 10:57:39,051 - telegram - INFO - Добавлен канал: @sashakots
+2025-04-08 10:57:39,195 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-04-08 10:57:39,336 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-04-08 10:57:39,552 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-04-08 10:57:39,658 - telegram - INFO - Добавлен канал: @remedia
+2025-04-08 10:57:39,751 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-04-08 10:57:39,751 - telegram - INFO - Найдено каналов: 12
+2025-04-08 10:57:39,751 - telegram - INFO - Начинаю сбор статистики по каналам
+2025-04-08 10:57:40,851 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3133930, 'views_count': 1630031, 'posts_count': 21855}
+2025-04-08 10:57:41,838 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1298190, 'views_count': 210503, 'posts_count': 67511}
+2025-04-08 10:57:42,576 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 745005, 'views_count': 140687, 'posts_count': 70441}
+2025-04-08 10:57:43,278 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 223952, 'views_count': 43721, 'posts_count': 20208}
+2025-04-08 10:57:43,958 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 585244, 'views_count': 217804, 'posts_count': 18875}
+2025-04-08 10:57:44,646 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 454778, 'views_count': 118260, 'posts_count': 27145}
+2025-04-08 10:57:45,502 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 567937, 'views_count': 110983, 'posts_count': 51534}
+2025-04-08 10:57:46,527 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1299446, 'views_count': 197672, 'posts_count': 304435}
+2025-04-08 10:57:47,266 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 111440, 'views_count': 372149, 'posts_count': 23258}
+2025-04-08 10:57:48,279 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 412224, 'views_count': 182044, 'posts_count': 3363}
+2025-04-08 10:57:48,284 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-04-08 10:57:49,200 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 541866, 'views_count': 244974, 'posts_count': 18211}
+2025-04-08 10:57:49,200 - telegram - INFO - === Статистика по каналам успешно собрана! ===
+2025-04-08 10:57:49,200 - telegram - INFO - Теперь можно безопасно выключить программу, если нужно.
+2025-04-08 10:57:49,200 - telegram - INFO - Начинаю обработку канала: yurasumy
+2025-04-08 10:57:49,200 - telegram - INFO - Начинаю обработку канала: rybar
+2025-04-08 10:57:49,200 - telegram - INFO - Начинаю обработку канала: voenacher
+2025-04-08 10:57:49,200 - telegram - INFO - Начинаю обработку канала: vladlentatarsky
+2025-04-08 10:57:49,200 - telegram - INFO - Начинаю обработку канала: vysokygovorit
+2025-04-08 10:57:49,206 - telegram - INFO - Начинаю обработку канала: warfakes
+2025-04-08 10:57:49,206 - telegram - INFO - Начинаю обработку канала: sashakots
+2025-04-08 10:57:49,206 - telegram - INFO - Начинаю обработку канала: SolovievLive
+2025-04-08 10:57:49,206 - telegram - INFO - Начинаю обработку канала: kremlinprachka
+2025-04-08 10:57:49,207 - telegram - INFO - Начинаю обработку канала: aleksandr_skif
+2025-04-08 10:57:49,207 - telegram - INFO - Начинаю обработку канала: None
+2025-04-08 10:57:49,207 - telegram - INFO - Начинаю обработку канала: fighter_bomber
+2025-04-08 10:57:49,209 - recursive_search - INFO - Обрабатываю канал: yurasumy (глубина: 0, всего каналов: 1)
+2025-04-08 10:57:49,209 - recursive_search - INFO - Обрабатываю канал: rybar (глубина: 0, всего каналов: 1)
+2025-04-08 10:57:49,210 - recursive_search - INFO - Обрабатываю канал: voenacher (глубина: 0, всего каналов: 1)
+2025-04-08 10:57:49,210 - recursive_search - INFO - Обрабатываю канал: vladlentatarsky (глубина: 0, всего каналов: 1)
+2025-04-08 10:57:49,210 - recursive_search - INFO - Обрабатываю канал: vysokygovorit (глубина: 0, всего каналов: 1)
+2025-04-08 10:57:49,332 - downloader - INFO - Начинаю обработку канала: yurasumy
+2025-04-08 10:57:49,335 - downloader - INFO - Начинаю обработку канала: vladlentatarsky
+2025-04-08 10:57:49,337 - downloader - INFO - Начинаю обработку канала: voenacher
+2025-04-08 10:57:49,338 - downloader - INFO - Начинаю обработку канала: vysokygovorit
+2025-04-08 10:57:49,340 - downloader - INFO - Начинаю обработку канала: rybar
+2025-04-08 10:57:50,130 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-08 10:57:50,373 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-08 10:57:50,871 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-08 10:57:51,278 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-08 10:57:53,790 - telethon.client.downloads - INFO - Starting direct file download in chunks of 262144 at 0, stride 262144
+2025-04-08 11:00:07,927 - telethon.client.updates - INFO - Got difference for account updates
+2025-04-08 11:00:17,441 - metrics - INFO - Операция main_process заняла 175.36 сек
