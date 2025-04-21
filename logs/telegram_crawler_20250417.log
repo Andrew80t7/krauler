@@ -1,0 +1,102 @@
+2025-04-17 17:47:29,689 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-04-17 17:47:29,759 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-04-17 17:47:30,289 - telegram - INFO - Добавлен канал: @dva_majors
+2025-04-17 17:47:30,439 - telegram - INFO - Добавлен канал: @voenacher
+2025-04-17 17:47:30,559 - telegram - INFO - Добавлен канал: @epoddubny
+2025-04-17 17:47:30,707 - telegram - INFO - Добавлен канал: @Sladkov_plus
+2025-04-17 17:47:30,809 - telegram - INFO - Добавлен канал: @milinfolive
+2025-04-17 17:47:30,898 - telegram - INFO - Добавлен канал: @wargonzo
+2025-04-17 17:47:30,979 - telegram - INFO - Добавлен канал: @sashakots
+2025-04-17 17:47:31,069 - telegram - INFO - Добавлен канал: @yurasumy
+2025-04-17 17:47:31,155 - telegram - INFO - Добавлен канал: @rybar
+2025-04-17 17:47:31,236 - telegram - INFO - Добавлен канал: @voenacher
+2025-04-17 17:47:31,319 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-04-17 17:47:31,431 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-04-17 17:47:31,559 - telegram - INFO - Добавлен канал: @warfakes
+2025-04-17 17:47:31,651 - telegram - INFO - Добавлен канал: @sashakots
+2025-04-17 17:47:31,742 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-04-17 17:47:31,827 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-04-17 17:47:31,907 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-04-17 17:47:31,995 - telegram - INFO - Добавлен канал: @remedia
+2025-04-17 17:47:32,075 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-04-17 17:47:32,075 - telegram - INFO - Найдено каналов: 19
+2025-04-17 17:47:32,075 - telegram - INFO - Начинаю сбор статистики по каналам
+2025-04-17 17:47:35,090 - telegram - INFO - Получена информация о канале dva_majors: {'subscribers_count': 1234403, 'views_count': 206362, 'posts_count': 67806}
+2025-04-17 17:47:36,564 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 741230, 'views_count': 118190, 'posts_count': 70757}
+2025-04-17 17:47:37,917 - telegram - INFO - Получена информация о канале epoddubny: {'subscribers_count': 708351, 'views_count': 165729, 'posts_count': 22259}
+2025-04-17 17:47:38,811 - telegram - INFO - Получена информация о канале Sladkov_plus: {'subscribers_count': 852730, 'views_count': 218044, 'posts_count': 10443}
+2025-04-17 17:47:39,887 - telegram - INFO - Получена информация о канале milinfolive: {'subscribers_count': 608365, 'views_count': 95153, 'posts_count': 141022}
+2025-04-17 17:47:41,968 - telegram - INFO - Получена информация о канале wargonzo: {'subscribers_count': 941335, 'views_count': 101623, 'posts_count': 24623}
+2025-04-17 17:47:43,170 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 564804, 'views_count': 126309, 'posts_count': 51752}
+2025-04-17 17:47:44,191 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3127133, 'views_count': 1358786, 'posts_count': 22055}
+2025-04-17 17:47:46,100 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1288036, 'views_count': 177177, 'posts_count': 67688}
+2025-04-17 17:47:47,335 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 741229, 'views_count': 118193, 'posts_count': 70757}
+2025-04-17 17:47:48,329 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 223461, 'views_count': 33994, 'posts_count': 20244}
+2025-04-17 17:47:49,362 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 582217, 'views_count': 184942, 'posts_count': 18960}
+2025-04-17 17:47:50,343 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 452467, 'views_count': 111381, 'posts_count': 27275}
+2025-04-17 17:47:51,453 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 564804, 'views_count': 126310, 'posts_count': 51752}
+2025-04-17 17:47:52,631 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1298080, 'views_count': 166790, 'posts_count': 305368}
+2025-04-17 17:47:53,566 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 110729, 'views_count': 372263, 'posts_count': 23258}
+2025-04-17 17:47:54,687 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 409142, 'views_count': 179928, 'posts_count': 3370}
+2025-04-17 17:47:54,696 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-04-17 17:47:55,658 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 540911, 'views_count': 221594, 'posts_count': 18321}
+2025-04-17 17:47:55,665 - telegram - INFO - === Статистика по каналам успешно собрана! ===
+2025-04-17 17:47:55,666 - telegram - INFO - Теперь можно безопасно выключить программу, если нужно.
+2025-04-17 17:47:55,666 - telegram - INFO - Начинаю обработку канала: dva_majors
+2025-04-17 17:47:55,668 - telegram - INFO - Начинаю обработку канала: voenacher
+2025-04-17 17:47:55,668 - telegram - INFO - Начинаю обработку канала: epoddubny
+2025-04-17 17:47:55,669 - telegram - INFO - Начинаю обработку канала: Sladkov_plus
+2025-04-17 17:47:55,669 - telegram - INFO - Начинаю обработку канала: milinfolive
+2025-04-17 17:47:55,670 - telegram - INFO - Начинаю обработку канала: wargonzo
+2025-04-17 17:47:55,671 - telegram - INFO - Начинаю обработку канала: sashakots
+2025-04-17 17:47:55,671 - telegram - INFO - Начинаю обработку канала: yurasumy
+2025-04-17 17:47:55,673 - telegram - INFO - Начинаю обработку канала: rybar
+2025-04-17 17:47:55,673 - telegram - INFO - Начинаю обработку канала: voenacher
+2025-04-17 17:47:55,674 - telegram - INFO - Начинаю обработку канала: vladlentatarsky
+2025-04-17 17:47:55,675 - telegram - INFO - Начинаю обработку канала: vysokygovorit
+2025-04-17 17:47:55,675 - telegram - INFO - Начинаю обработку канала: warfakes
+2025-04-17 17:47:55,676 - telegram - INFO - Начинаю обработку канала: sashakots
+2025-04-17 17:47:55,676 - telegram - INFO - Начинаю обработку канала: SolovievLive
+2025-04-17 17:47:55,677 - telegram - INFO - Начинаю обработку канала: kremlinprachka
+2025-04-17 17:47:55,679 - telegram - INFO - Начинаю обработку канала: aleksandr_skif
+2025-04-17 17:47:55,681 - telegram - INFO - Начинаю обработку канала: None
+2025-04-17 17:47:55,682 - telegram - INFO - Начинаю обработку канала: fighter_bomber
+2025-04-17 17:47:55,684 - recursive_search - INFO - Обрабатываю канал: dva_majors (глубина: 0, всего каналов: 1)
+2025-04-17 17:47:55,686 - recursive_search - INFO - Обрабатываю канал: voenacher (глубина: 0, всего каналов: 1)
+2025-04-17 17:47:55,689 - recursive_search - INFO - Обрабатываю канал: epoddubny (глубина: 0, всего каналов: 1)
+2025-04-17 17:47:55,690 - recursive_search - INFO - Обрабатываю канал: Sladkov_plus (глубина: 0, всего каналов: 1)
+2025-04-17 17:47:55,691 - recursive_search - INFO - Обрабатываю канал: milinfolive (глубина: 0, всего каналов: 1)
+2025-04-17 17:47:55,808 - downloader - INFO - Начинаю обработку канала: voenacher
+2025-04-17 17:47:55,813 - downloader - INFO - Начинаю обработку канала: milinfolive
+2025-04-17 17:47:55,817 - downloader - INFO - Начинаю обработку канала: epoddubny
+2025-04-17 17:47:55,821 - downloader - INFO - Начинаю обработку канала: Sladkov_plus
+2025-04-17 17:47:55,824 - downloader - INFO - Начинаю обработку канала: dva_majors
+2025-04-17 17:47:57,437 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-17 17:47:58,095 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-17 17:47:59,022 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-17 17:47:59,633 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-17 17:47:59,638 - telethon.client.downloads - INFO - File lives in another DC
+2025-04-17 17:47:59,743 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-04-17 17:48:02,415 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-17 17:48:05,919 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-04-17 17:48:05,920 - telethon.client.telegrambaseclient - INFO - Exporting auth for new borrowed sender in DcOption(id=4, ip_address='149.154.167.92', port=443, ipv6=False, media_only=False, tcpo_only=False, cdn=False, static=False, this_port_only=False, secret=None)
+2025-04-17 17:50:23,225 - downloader - INFO - Видео успешно сохранено: downloaded_videos\IMG_7096.MP4
+2025-04-17 17:50:23,225 - downloader - ERROR - Ошибка при скачивании видео IMG_7096.MP4: table videos has no column named name
+2025-04-17 17:50:23,241 - telethon.client.downloads - INFO - Starting direct file download in chunks of 262144 at 0, stride 262144
+2025-04-17 17:55:17,005 - telethon.client.updates - INFO - Got difference for channel 1892533145 updates
+2025-04-17 17:55:34,192 - telethon.client.updates - INFO - Got difference for channel 1336386126 updates
+2025-04-17 17:56:26,682 - downloader - INFO - Видео успешно сохранено: downloaded_videos\epoddubny_23125.mp4
+2025-04-17 17:56:26,701 - downloader - ERROR - Ошибка при скачивании видео epoddubny_23125.mp4: table videos has no column named name
+2025-04-17 17:56:26,704 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-17 17:57:35,316 - downloader - INFO - Видео успешно сохранено: downloaded_videos\IMG_3881.MP4
+2025-04-17 17:57:35,320 - downloader - ERROR - Ошибка при скачивании видео IMG_3881.MP4: table videos has no column named name
+2025-04-17 17:57:35,323 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-17 18:02:00,581 - telethon.client.updates - INFO - Got difference for account updates
+2025-04-17 18:02:07,069 - telethon.client.updates - INFO - Got difference for channel 1754252633 updates
+2025-04-17 18:02:24,748 - downloader - INFO - Видео успешно сохранено: downloaded_videos\voenacher_80067.mp4
+2025-04-17 18:02:24,751 - downloader - ERROR - Ошибка при скачивании видео voenacher_80067.mp4: table videos has no column named name
+2025-04-17 18:02:24,751 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-04-17 18:03:44,565 - telethon.client.telegrambaseclient - INFO - Disconnecting borrowed sender for DC 4
+2025-04-17 18:03:44,565 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-04-17 18:03:48,384 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-04-17 18:05:13,305 - metrics - INFO - Операция main_process заняла 1063.68 сек

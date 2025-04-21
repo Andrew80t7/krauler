@@ -8,10 +8,9 @@ from krauler.utils.logger import setup_logging
 from krauler.utils.metrics import measure_time, time_tracker
 from krauler.database.db import init_db
 import logging
-import csv
-
 
 logger = logging.getLogger('telegram')
+
 
 @measure_time('main_process')
 async def main_async():
@@ -27,7 +26,9 @@ async def main_async():
             keyword = config.get('search_keyword', 'tech')
             logger.info(f"Начинаю поиск каналов по ключевому слову: {keyword}")
             channels = await search_channels(client, keyword, limit=500)
+
         else:
+
             # Использование списка каналов
             channels = []
             for channel_username in config.get('channels', []):
@@ -35,6 +36,8 @@ async def main_async():
                     channel = await client.get_entity(channel_username)
                     channels.append(channel)
                     logger.info(f"Добавлен канал: {channel_username}")
+
+
                 except Exception as e:
                     logger.error(f"Ошибка при добавлении канала {channel_username}: {str(e)}")
 
@@ -43,13 +46,13 @@ async def main_async():
             return
 
         logger.info(f"Найдено каналов: {len(channels)}")
-        
+
         # Собираем статистику по каналам
         logger.info("Начинаю сбор статистики по каналам")
         await process_channels_info(client, channels)
         logger.info("=== Статистика по каналам успешно собрана! ===")
         logger.info("Теперь можно безопасно выключить программу, если нужно.")
-        
+
         # Обрабатываем каналы
         semaphore = asyncio.Semaphore(5)
 
@@ -65,7 +68,7 @@ async def main_async():
 
         await asyncio.gather(*tasks)
         await client.disconnect()
-        
+
         # Выводим статистику времени
         stats = time_tracker.get_stats()
         logger.info("\n=== СТАТИСТИКА ВРЕМЕНИ ===")
@@ -76,10 +79,10 @@ async def main_async():
             logger.info(f"Минимальное время: {data['min']:.2f} сек")
             logger.info(f"Максимальное время: {data['max']:.2f} сек")
             logger.info(f"Количество выполнений: {data['count']}")
-        
+
         logger.info("\n=== Программа успешно завершила работу! ===")
         logger.info("Можно безопасно выключить программу.")
-        
+
     except Exception as e:
         logger.error(f"Произошла ошибка: {str(e)}")
         logger.info("=== Программа завершилась с ошибкой. Можно безопасно выключить. ===")
@@ -87,4 +90,3 @@ async def main_async():
 
 if __name__ == "__main__":
     asyncio.run(main_async())
-
