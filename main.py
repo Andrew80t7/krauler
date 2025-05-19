@@ -1,16 +1,33 @@
 import asyncio
 import os
+import logging
+
+from model.infer_debug import load_model
+from model.neuro_model import predict_video
 from telegram_api.client import get_client
 from telegram_api.search import search_channels, process_channels_info
-from krauler.core.recursive_search import process_channel_recursive
+# from krauler.core.recursive_search import process_channel_recursive
 from krauler.config.config_loader import load_config
 from krauler.utils.logger import setup_logging
 from krauler.utils.metrics import measure_time, time_tracker
-from krauler.database.db import init_db
-import logging
+from krauler.database.db import init_db, insert_video
+from torchvision import transforms
 
 logger = logging.getLogger('telegram')
 
+# Предобработка кадров для нейросети
+transform = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        mean=[0.485, 0.456, 0.406],
+        std=[0.229, 0.224, 0.225]
+    )
+])
+
+# Загружаем модель один раз
+MODEL_CKPT = os.path.join('model', 'checkpoints', 'best_model.pth')
+model = load_model(MODEL_CKPT, num_classes=2)
 
 @measure_time('main_process')
 async def main_async():
@@ -21,25 +38,20 @@ async def main_async():
         init_db()
         client = await get_client(config)
 
+        # --- Выбор каналов ---
         if config.get('use_keyword_search', False):
-            # Поиск по ключевому слову
             keyword = config.get('search_keyword', 'tech')
-            logger.info(f"Начинаю поиск каналов по ключевому слову: {keyword}")
+            logger.info(f"Поиск каналов по ключевому слову: {keyword}")
             channels = await search_channels(client, keyword, limit=500)
-
         else:
-
-            # Использование списка каналов
             channels = []
-            for channel_username in config.get('channels', []):
+            for username in config.get('channels', []):
                 try:
-                    channel = await client.get_entity(channel_username)
-                    channels.append(channel)
-                    logger.info(f"Добавлен канал: {channel_username}")
-
-
+                    ch = await client.get_entity(username)
+                    channels.append(ch)
+                    logger.info(f"Добавлен канал: {username}")
                 except Exception as e:
-                    logger.error(f"Ошибка при добавлении канала {channel_username}: {str(e)}")
+                    logger.error(f"Ошибка добавления канала {username}: {e}")
 
         if not channels:
             logger.warning("Каналы не найдены")
@@ -47,46 +59,54 @@ async def main_async():
 
         logger.info(f"Найдено каналов: {len(channels)}")
 
-        # Собираем статистику по каналам
-        logger.info("Начинаю сбор статистики по каналам")
+        # --- Сбор статистики ---
+        logger.info("Сбор статистики по каналам")
         await process_channels_info(client, channels)
-        logger.info("=== Статистика по каналам успешно собрана! ===")
-        logger.info("Теперь можно безопасно выключить программу, если нужно.")
 
-        # Обрабатываем каналы
-        semaphore = asyncio.Semaphore(5)
-
-        async def process_channel_recursive_with_semaphore(client, username):
-            async with semaphore:
-                await process_channel_recursive(client, username)
-
-        tasks = []
+        # --- Новый способ: прямой обход сообщений и классификация ---
         for channel in channels:
-            logger.info(f"Начинаю обработку канала: {channel.username}")
-            task = asyncio.create_task(process_channel_recursive_with_semaphore(client, channel.username))
-            tasks.append(task)
+            logger.info(f"Обрабатываем канал: {channel.username}")
+            async for msg in client.iter_messages(channel, limit=config.get('max_messages', 1000)):
+                if not msg.media:
+                    continue
+                # сохраняем временно в tmp.mp4
+                tmp_path = f'tmp_{msg.id}.mp4'
+                await client.download_media(msg.media, file=tmp_path)
 
-        await asyncio.gather(*tasks)
+                # прогоняем через модель
+                pred = predict_video(tmp_path, model, transform)
+                os.remove(tmp_path)
+
+                if pred == 1:
+                    # если модель решила скачать — сохраняем и логируем
+                    file_path = os.path.join('downloaded_videos', f"{channel.username}_{msg.id}.mp4")
+                    await client.download_media(msg.media, file=file_path)
+                    insert_video(channel.username, msg.id, file_path, msg.file.size if hasattr(msg, 'file') else 0)
+                    logger.info(f"Видео сохранено: {file_path}")
+                else:
+                    logger.debug(f"Видео пропущено моделью: {channel.username}/{msg.id}")
+
+        # --- Закомментированная старая логика для сравнения ---
+        # semaphore = asyncio.Semaphore(5)
+        # async def rec_with_sem(client, username):
+        #     async with semaphore:
+        #         await process_channel_recursive(client, username)
+        # tasks = [asyncio.create_task(rec_with_sem(client, ch.username)) for ch in channels]
+        # await asyncio.gather(*tasks)
+
         await client.disconnect()
 
-        # Выводим статистику времени
+        # --- Логирование метрик времени ---
         stats = time_tracker.get_stats()
-        logger.info("\n=== СТАТИСТИКА ВРЕМЕНИ ===")
-        for operation, data in stats.items():
-            logger.info(f"\nОперация: {operation}")
-            logger.info(f"Всего времени: {data['total']:.2f} сек")
-            logger.info(f"Среднее время: {data['avg']:.2f} сек")
-            logger.info(f"Минимальное время: {data['min']:.2f} сек")
-            logger.info(f"Максимальное время: {data['max']:.2f} сек")
-            logger.info(f"Количество выполнений: {data['count']}")
+        logger.info("=== СТАТИСТИКА ВРЕМЕНИ ===")
+        for op, d in stats.items():
+            logger.info(f"{op}: total={d['total']:.2f}s, avg={d['avg']:.2f}s over {d['count']} runs")
 
-        logger.info("\n=== Программа успешно завершила работу! ===")
-        logger.info("Можно безопасно выключить программу.")
+        logger.info("Работа программы завершена.")
 
     except Exception as e:
-        logger.error(f"Произошла ошибка: {str(e)}")
-        logger.info("=== Программа завершилась с ошибкой. Можно безопасно выключить. ===")
-
+        logger.error(f"Ошибка в main: {e}")
+        logger.info("Завершение с ошибкой.")
 
 if __name__ == "__main__":
     asyncio.run(main_async())

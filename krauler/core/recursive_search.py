@@ -13,7 +13,6 @@ MAX_CHANNELS = 4  # Максимальное количество каналов
 MAX_MESSAGES = 10  # Максимальное количество сообщений
 MAX_CONCURRENT_TASKS = 1  # Один канал за раз
 
-# Глобальные переменные для контроля
 
 processed_channels = set()  # Все обработанные каналы
 current_tasks = set()  # Текущие выполняющиеся задачи
@@ -44,6 +43,7 @@ def should_stop():
         return True
 
     return False
+
 
 async def process_channel_recursive(client, channel, visited=None, max_depth=MAX_DEPTH, current_depth=0):
     global processed_channels, current_tasks, last_video_time

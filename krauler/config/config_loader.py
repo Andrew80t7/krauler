@@ -1,8 +1,11 @@
 import json
 import os
 
+
 def load_config(config_path):
-    """Загрузка конфигурации из JSON файла"""
+    """
+    Загрузка конфигурации
+    """
     if not os.path.exists(config_path):
         raise FileNotFoundError(f"Конфигурационный файл не найден: {config_path}")
     

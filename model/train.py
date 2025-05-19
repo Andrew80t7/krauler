@@ -1,32 +1,54 @@
-# train.py
 import os
+import cv2
 import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from torch.optim import Adam
 from torch.nn import CrossEntropyLoss
 
-# относительные импорты внутри пакета model
-from .data.download_from_drive import master as download_drive_data
-from .dataset import VideoDataset
-from .model import VideoClassifier
+from model.dataset import VideoDataset
+from model.neuro_model import VideoClassifier
 
+# Количество кадров на видео, размер батча и число эпох
+NUM_FRAMES = 10
+BATCH_SIZE = 2
+NUM_EPOCHS = 5
+
+def collate_fn(batch):
+    """
+    Собирает батч, отфильтровывая неполные или битые примеры.
+    """
+    vids_list, labs_list = [], []
+    for vid, lab in batch:
+        # проверяем, что тензор валиден и содержит ровно NUM_FRAMES
+        if isinstance(vid, torch.Tensor) and vid.ndim == 4 and vid.size(0) == NUM_FRAMES and lab >= 0:
+            vids_list.append(vid)
+            labs_list.append(lab)
+    if not vids_list:
+        return torch.empty(0), torch.empty(0, dtype=torch.long)
+    vids = torch.stack(vids_list, dim=0)
+    labs = torch.tensor(labs_list, dtype=torch.long)
+    return vids, labs
+
+def filter_samples(dataset):
+    """
+    Удаляет из dataset.samples видео с общей длиной кадров < NUM_FRAMES
+    или не открывающиеся вовсе.
+    """
+    valid = []
+    for path, lab in dataset.samples:
+        cap = cv2.VideoCapture(str(path))
+        total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        cap.release()
+        if total >= NUM_FRAMES:
+            valid.append((path, lab))
+    dataset.samples = valid
 
 def main():
-    # 1. Подтягиваем видео из Google Drive в локальные data/train/0 и data/train/1
-    download_drive_data()
+    # Путь к папкам с обучающим датасетом (0/ и 1/)
+    data_root = r"D:\Videos\train"
 
-    # 2. Собираем пути и метки, исходя из структуры папок krauler/data/train/{0,1}
-    data_root = os.path.join(os.path.dirname(__file__), 'krauler', 'data', 'train')
-    video_paths, labels = [], []
-    for label_str in ('0', '1'):
-        class_dir = os.path.join(data_root, label_str)
-        for fname in os.listdir(class_dir):
-            if fname.lower().endswith(('.mp4', '.avi', '.mov')):
-                video_paths.append(os.path.join(class_dir, fname))
-                labels.append(int(label_str))
-
-    # 3. Трансформации (те же, что при обучении)
+    # Трансформации кадров
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
@@ -36,48 +58,67 @@ def main():
         )
     ])
 
-    # 4. Датасет и загрузчик
-    dataset = VideoDataset(video_paths, labels, transform=transform, num_frames=10)
-    loader = DataLoader(dataset, batch_size=2, shuffle=True, num_workers=4)
+    # Создание датасета и фильтрация битых видео
+    dataset = VideoDataset(
+        root_dir=data_root,
+        transform=transform,
+        num_frames=NUM_FRAMES
+    )
+    filter_samples(dataset)
+    if len(dataset) == 0:
+        print("No valid videos found. Exiting.")
+        return
 
-    # 5. Модель, оптимизатор, функция потерь
+    loader = DataLoader(
+        dataset,
+        batch_size=BATCH_SIZE,
+        shuffle=True,
+        num_workers=0,
+        collate_fn=collate_fn
+    )
+
+    # Модель, оптимизатор, функция потерь
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = VideoClassifier(num_classes=2).to(device)
     optimizer = Adam(model.parameters(), lr=1e-4)
     criterion = CrossEntropyLoss()
 
-    # 6. Цикл обучения
-    best_loss = float('inf')
     os.makedirs('checkpoints', exist_ok=True)
+    best_loss = float('inf')
 
-    num_epochs = 5
-    for epoch in range(1, num_epochs + 1):
+    for epoch in range(1, NUM_EPOCHS + 1):
         model.train()
         running_loss = 0.0
+        total_samples = 0
 
         for vids, labs in loader:
+            if vids.numel() == 0:
+                continue
+
             vids, labs = vids.to(device), labs.to(device)
             optimizer.zero_grad()
             outputs = model(vids)
             loss = criterion(outputs, labs)
             loss.backward()
             optimizer.step()
-            running_loss += loss.item() * vids.size(0)
 
-        epoch_loss = running_loss / len(dataset)
-        print(f"Epoch {epoch}/{num_epochs} — Loss: {epoch_loss:.4f}")
+            bs = vids.size(0)
+            running_loss += loss.item() * bs
+            total_samples += bs
 
-        # Сохраняем, если улучшилось
-        ckpt_path = f'checkpoints/epoch{epoch}.pth'
-        torch.save(model.state_dict(), ckpt_path)
+        if total_samples == 0:
+            print(f"Epoch {epoch}: no valid samples, stopping.")
+            break
+
+        epoch_loss = running_loss / total_samples
+        print(f"Epoch {epoch}/{NUM_EPOCHS} — Loss: {epoch_loss:.4f}")
+
         if epoch_loss < best_loss:
             best_loss = epoch_loss
-            best_path = 'checkpoints/best_model.pth'
-            torch.save(model.state_dict(), best_path)
-            print(f"  ↳ New best model saved to {best_path}")
+            torch.save(model.state_dict(), 'checkpoints/best_model.pth')
+            print(f"  ↳ New best model saved (loss={best_loss:.4f})")
 
     print("Training complete.")
-
 
 if __name__ == '__main__':
     main()
