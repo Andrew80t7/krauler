@@ -4,16 +4,23 @@ import logging
 
 from model.infer_debug import load_model
 from model.neuro_model import predict_video
+# from krauler.neuro_model import load_model, predict_video
 from telegram_api.client import get_client
 from telegram_api.search import search_channels, process_channels_info
-# from krauler.core.recursive_search import process_channel_recursive
 from krauler.config.config_loader import load_config
 from krauler.utils.logger import setup_logging
 from krauler.utils.metrics import measure_time, time_tracker
 from krauler.database.db import init_db, insert_video
 from torchvision import transforms
 
+# Уровень логирования Telethon — только WARN/ERROR
+logging.getLogger("telethon").setLevel(logging.WARNING)
+
 logger = logging.getLogger('telegram')
+
+# Параметры
+NUM_FRAMES = 10
+MAX_MSG = 1000
 
 # Предобработка кадров для нейросети
 transform = transforms.Compose([
@@ -31,82 +38,72 @@ model = load_model(MODEL_CKPT, num_classes=2)
 
 @measure_time('main_process')
 async def main_async():
-    try:
-        setup_logging()
-        config_path = os.path.join('krauler', 'config', 'config.json')
-        config = load_config(config_path)
-        init_db()
-        client = await get_client(config)
+    setup_logging()
+    config = load_config(os.path.join('krauler', 'config', 'config.json'))
+    init_db()
+    client = await get_client(config)
 
-        # --- Выбор каналов ---
-        if config.get('use_keyword_search', False):
-            keyword = config.get('search_keyword', 'tech')
-            logger.info(f"Поиск каналов по ключевому слову: {keyword}")
-            channels = await search_channels(client, keyword, limit=500)
-        else:
-            channels = []
-            for username in config.get('channels', []):
-                try:
-                    ch = await client.get_entity(username)
-                    channels.append(ch)
-                    logger.info(f"Добавлен канал: {username}")
-                except Exception as e:
-                    logger.error(f"Ошибка добавления канала {username}: {e}")
+    # 1) Получаем список каналов
+    if config.get('use_keyword_search', False):
+        keyword = config.get('search_keyword', 'tech')
+        logger.info(f"Поиск каналов по ключевому слову: {keyword}")
+        channels = await search_channels(client, keyword, limit=500)
+    else:
+        channels = []
+        for uname in config.get('channels', []):
+            try:
+                ch = await client.get_entity(uname)
+                channels.append(ch)
+                logger.info(f"Добавлен канал: {uname}")
+            except Exception as ex:
+                logger.error(f"Ошибка добавления канала {uname}: {ex}")
 
-        if not channels:
-            logger.warning("Каналы не найдены")
-            return
-
-        logger.info(f"Найдено каналов: {len(channels)}")
-
-        # --- Сбор статистики ---
-        logger.info("Сбор статистики по каналам")
-        await process_channels_info(client, channels)
-
-        # --- Новый способ: прямой обход сообщений и классификация ---
-        for channel in channels:
-            logger.info(f"Обрабатываем канал: {channel.username}")
-            async for msg in client.iter_messages(channel, limit=config.get('max_messages', 1000)):
-                if not msg.media:
-                    continue
-                # сохраняем временно в tmp.mp4
-                tmp_path = f'tmp_{msg.id}.mp4'
-                await client.download_media(msg.media, file=tmp_path)
-
-                # прогоняем через модель
-                pred = predict_video(tmp_path, model, transform)
-                os.remove(tmp_path)
-
-                if pred == 1:
-                    # если модель решила скачать — сохраняем и логируем
-                    file_path = os.path.join('downloaded_videos', f"{channel.username}_{msg.id}.mp4")
-                    await client.download_media(msg.media, file=file_path)
-                    insert_video(channel.username, msg.id, file_path, msg.file.size if hasattr(msg, 'file') else 0)
-                    logger.info(f"Видео сохранено: {file_path}")
-                else:
-                    logger.debug(f"Видео пропущено моделью: {channel.username}/{msg.id}")
-
-        # --- Закомментированная старая логика для сравнения ---
-        # semaphore = asyncio.Semaphore(5)
-        # async def rec_with_sem(client, username):
-        #     async with semaphore:
-        #         await process_channel_recursive(client, username)
-        # tasks = [asyncio.create_task(rec_with_sem(client, ch.username)) for ch in channels]
-        # await asyncio.gather(*tasks)
-
+    if not channels:
+        logger.warning("Каналы не найдены, выходим.")
         await client.disconnect()
+        return
 
-        # --- Логирование метрик времени ---
-        stats = time_tracker.get_stats()
-        logger.info("=== СТАТИСТИКА ВРЕМЕНИ ===")
-        for op, d in stats.items():
-            logger.info(f"{op}: total={d['total']:.2f}s, avg={d['avg']:.2f}s over {d['count']} runs")
+    # 2) Сбор статистики (опционально)
+    logger.info("Сбор статистики по каналам")
+    await process_channels_info(client, channels)
 
-        logger.info("Работа программы завершена.")
+    # 3) Прямой обход сообщений и фильтрация нейросетью
+    os.makedirs('downloaded_videos', exist_ok=True)
+    # --- Новый способ: прямой обход сообщений и классификация ---
+    for channel in channels:
+        logger.info(f"Обрабатываем канал: {channel.username}")
+        async for msg in client.iter_messages(channel, limit=config.get('max_messages', MAX_MSG)):
+            if not msg.media:
+                continue
 
-    except Exception as e:
-        logger.error(f"Ошибка в main: {e}")
-        logger.info("Завершение с ошибкой.")
+            tmp = f"tmp_{msg.id}.mp4"
+            await client.download_media(msg.media, file=tmp)
+
+            # запускаем predict_video без лишних аргументов
+            pred = predict_video(tmp, model, transform)
+            os.remove(tmp)
+
+            if pred == 1:
+                out_path = os.path.join('downloaded_videos', f"{channel.username}_{msg.id}.mp4")
+                await client.download_media(msg.media, file=out_path)
+                # insert_video(channel.username, msg.id, out_path,
+                #              getattr(msg, 'file', {}).get('size', 0))
+                file_size = msg.file.size if getattr(msg, 'file', None) and hasattr(msg.file, 'size') else 0
+                insert_video(channel.username, msg.id, out_path, file_size)
+                logger.info(f"Сохранено: {out_path}")
+            else:
+                logger.debug(f"Пропущено сетью: {channel.username}/{msg.id}")
+
+    # 4) Отключаем клиента
+    await client.disconnect()
+
+    # 5) Логируем метрики времени
+    stats = time_tracker.get_stats()
+    logger.info("=== СТАТИСТИКА ВРЕМЕНИ ===")
+    for op, d in stats.items():
+        logger.info(f"{op}: total={d['total']:.2f}s, avg={d['avg']:.2f}s over {d['count']} runs")
+
+    logger.info("Программа завершена успешно.")
 
 if __name__ == "__main__":
     asyncio.run(main_async())

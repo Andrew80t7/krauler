@@ -25,19 +25,30 @@ class VideoClassifier(torch.nn.Module):
         return self.classifier(lstm_out[:, -1, :])
 
 
-def predict_video(video_path, model, transform, device=None):
+def predict_video(video_path, model, transform, device=None, num_frames=10):
     import cv2
     from PIL import Image
     import numpy as np
     import torch
 
     device = device or next(model.parameters()).device
+
     try:
         cap = cv2.VideoCapture(video_path)
-        frames = []
-        total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-        indices = np.linspace(0, total-1, 10, dtype=int)
 
+        if not cap.isOpened():
+            raise RuntimeError(f'Cannot open video {video_path}')
+
+        total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        cap.release()
+
+        if total <= 0 or total < num_frames:
+            return -1
+
+        indices = np.linspace(0, total - 1, 10, dtype=int)
+
+        frames = []
+        cap = cv2.VideoCapture(video_path)
         for i in indices:
             cap.set(cv2.CAP_PROP_POS_FRAMES, i)
             ret, frame = cap.read()

@@ -1,0 +1,350 @@
+2025-05-22 11:53:50,294 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-05-22 11:53:50,360 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-05-22 11:53:50,864 - telegram - INFO - Добавлен канал: @dva_majors
+2025-05-22 11:53:50,980 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 11:53:51,062 - telegram - INFO - Добавлен канал: @epoddubny
+2025-05-22 11:53:51,141 - telegram - INFO - Добавлен канал: @Sladkov_plus
+2025-05-22 11:53:51,237 - telegram - INFO - Добавлен канал: @milinfolive
+2025-05-22 11:53:51,323 - telegram - INFO - Добавлен канал: @wargonzo
+2025-05-22 11:53:51,408 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 11:53:51,492 - telegram - INFO - Добавлен канал: @yurasumy
+2025-05-22 11:53:51,574 - telegram - INFO - Добавлен канал: @rybar
+2025-05-22 11:53:51,654 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 11:53:51,736 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-05-22 11:53:51,833 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-05-22 11:53:51,913 - telegram - INFO - Добавлен канал: @warfakes
+2025-05-22 11:53:52,014 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 11:53:52,092 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-05-22 11:53:52,176 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-05-22 11:53:52,262 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-05-22 11:53:52,342 - telegram - INFO - Добавлен канал: @remedia
+2025-05-22 11:53:52,435 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-05-22 11:53:52,435 - telegram - INFO - Найдено каналов: 19
+2025-05-22 11:53:52,437 - telegram - INFO - Сбор статистики по каналам
+2025-05-22 11:53:53,329 - telegram - INFO - Получена информация о канале dva_majors: {'subscribers_count': 1234430, 'views_count': 216731, 'posts_count': 70192}
+2025-05-22 11:53:54,686 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733760, 'views_count': 137387, 'posts_count': 71795}
+2025-05-22 11:53:55,502 - telegram - INFO - Получена информация о канале epoddubny: {'subscribers_count': 699518, 'views_count': 132961, 'posts_count': 22636}
+2025-05-22 11:53:56,388 - telegram - INFO - Получена информация о канале Sladkov_plus: {'subscribers_count': 844403, 'views_count': 246275, 'posts_count': 10701}
+2025-05-22 11:53:57,672 - telegram - INFO - Получена информация о канале milinfolive: {'subscribers_count': 607047, 'views_count': 103507, 'posts_count': 143523}
+2025-05-22 11:53:58,536 - telegram - INFO - Получена информация о канале wargonzo: {'subscribers_count': 926009, 'views_count': 97453, 'posts_count': 25300}
+2025-05-22 11:53:59,609 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558664, 'views_count': 99009, 'posts_count': 52420}
+2025-05-22 11:54:00,449 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3113810, 'views_count': 1625802, 'posts_count': 22669}
+2025-05-22 11:54:01,508 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1262119, 'views_count': 163392, 'posts_count': 68450}
+2025-05-22 11:54:02,169 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733759, 'views_count': 137387, 'posts_count': 71795}
+2025-05-22 11:54:03,437 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 219921, 'views_count': 41570, 'posts_count': 20311}
+2025-05-22 11:54:04,204 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 574421, 'views_count': 185606, 'posts_count': 19243}
+2025-05-22 11:54:05,491 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 446016, 'views_count': 117912, 'posts_count': 27834}
+2025-05-22 11:54:06,961 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558664, 'views_count': 99009, 'posts_count': 52420}
+2025-05-22 11:54:07,632 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1299284, 'views_count': 178931, 'posts_count': 309381}
+2025-05-22 11:54:08,341 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 108353, 'views_count': 372678, 'posts_count': 23258}
+2025-05-22 11:54:09,033 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 399187, 'views_count': 181975, 'posts_count': 3397}
+2025-05-22 11:54:09,038 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-05-22 11:54:09,785 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 542891, 'views_count': 236982, 'posts_count': 18714}
+2025-05-22 11:54:09,797 - telegram - INFO - Обрабатываем канал: dva_majors
+2025-05-22 11:54:10,279 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-05-22 11:54:10,375 - telethon.client.downloads - INFO - File lives in another DC
+2025-05-22 11:54:10,460 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-05-22 11:54:11,851 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-05-22 11:54:11,852 - telethon.client.telegrambaseclient - INFO - Exporting auth for new borrowed sender in DcOption(id=4, ip_address='149.154.167.92', port=443, ipv6=False, media_only=False, tcpo_only=False, cdn=False, static=False, this_port_only=False, secret=None)
+2025-05-22 11:54:13,226 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-05-22 11:54:13,928 - telethon.client.downloads - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2025-05-22 12:15:35,672 - telegram - INFO - Добавлен канал: @dva_majors
+2025-05-22 12:15:35,936 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 12:15:36,045 - telegram - INFO - Добавлен канал: @epoddubny
+2025-05-22 12:15:36,148 - telegram - INFO - Добавлен канал: @Sladkov_plus
+2025-05-22 12:15:36,241 - telegram - INFO - Добавлен канал: @milinfolive
+2025-05-22 12:15:36,339 - telegram - INFO - Добавлен канал: @wargonzo
+2025-05-22 12:15:36,433 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 12:15:36,558 - telegram - INFO - Добавлен канал: @yurasumy
+2025-05-22 12:15:36,699 - telegram - INFO - Добавлен канал: @rybar
+2025-05-22 12:15:36,833 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 12:15:36,953 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-05-22 12:15:37,085 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-05-22 12:15:37,235 - telegram - INFO - Добавлен канал: @warfakes
+2025-05-22 12:15:37,405 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 12:15:37,601 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-05-22 12:15:37,796 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-05-22 12:15:37,973 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-05-22 12:15:38,221 - telegram - INFO - Добавлен канал: @remedia
+2025-05-22 12:15:38,416 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-05-22 12:15:38,417 - telegram - INFO - Сбор статистики по каналам
+2025-05-22 12:15:39,524 - telegram - INFO - Получена информация о канале dva_majors: {'subscribers_count': 1234399, 'views_count': 210311, 'posts_count': 70196}
+2025-05-22 12:15:40,278 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733731, 'views_count': 137388, 'posts_count': 71796}
+2025-05-22 12:15:40,972 - telegram - INFO - Получена информация о канале epoddubny: {'subscribers_count': 699505, 'views_count': 133274, 'posts_count': 22636}
+2025-05-22 12:15:41,769 - telegram - INFO - Получена информация о канале Sladkov_plus: {'subscribers_count': 844398, 'views_count': 246379, 'posts_count': 10701}
+2025-05-22 12:15:42,901 - telegram - INFO - Получена информация о канале milinfolive: {'subscribers_count': 607044, 'views_count': 105000, 'posts_count': 143523}
+2025-05-22 12:15:44,351 - telegram - INFO - Получена информация о канале wargonzo: {'subscribers_count': 925998, 'views_count': 97852, 'posts_count': 25300}
+2025-05-22 12:15:45,291 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558656, 'views_count': 98262, 'posts_count': 52421}
+2025-05-22 12:15:46,104 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3113819, 'views_count': 1596451, 'posts_count': 22671}
+2025-05-22 12:15:47,185 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1262110, 'views_count': 163853, 'posts_count': 68450}
+2025-05-22 12:15:47,917 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733731, 'views_count': 137388, 'posts_count': 71796}
+2025-05-22 12:15:48,692 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 219918, 'views_count': 41574, 'posts_count': 20311}
+2025-05-22 12:15:49,516 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 574421, 'views_count': 185727, 'posts_count': 19243}
+2025-05-22 12:15:50,328 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 446009, 'views_count': 118404, 'posts_count': 27834}
+2025-05-22 12:15:51,159 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558656, 'views_count': 98265, 'posts_count': 52421}
+2025-05-22 12:15:51,877 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1299276, 'views_count': 179189, 'posts_count': 309383}
+2025-05-22 12:15:52,655 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 108353, 'views_count': 372678, 'posts_count': 23258}
+2025-05-22 12:15:53,396 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 399183, 'views_count': 182031, 'posts_count': 3397}
+2025-05-22 12:15:53,406 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-05-22 12:15:54,090 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 542884, 'views_count': 237448, 'posts_count': 18714}
+2025-05-22 12:15:54,095 - telegram - INFO - Обрабатываем канал: dva_majors
+2025-05-22 12:16:46,566 - metrics - INFO - Операция main_process заняла 71.56 сек
+2025-05-22 12:22:31,126 - telegram - INFO - Добавлен канал: @dva_majors
+2025-05-22 12:22:31,355 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 12:22:31,449 - telegram - INFO - Добавлен канал: @epoddubny
+2025-05-22 12:22:31,590 - telegram - INFO - Добавлен канал: @Sladkov_plus
+2025-05-22 12:22:31,860 - telegram - INFO - Добавлен канал: @milinfolive
+2025-05-22 12:22:31,972 - telegram - INFO - Добавлен канал: @wargonzo
+2025-05-22 12:22:32,046 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 12:22:32,120 - telegram - INFO - Добавлен канал: @yurasumy
+2025-05-22 12:22:32,199 - telegram - INFO - Добавлен канал: @rybar
+2025-05-22 12:22:32,275 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 12:22:32,363 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-05-22 12:22:32,469 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-05-22 12:22:32,549 - telegram - INFO - Добавлен канал: @warfakes
+2025-05-22 12:22:32,627 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 12:22:32,703 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-05-22 12:22:32,777 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-05-22 12:22:32,855 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-05-22 12:22:32,935 - telegram - INFO - Добавлен канал: @remedia
+2025-05-22 12:22:33,010 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-05-22 12:22:33,010 - telegram - INFO - Сбор статистики по каналам
+2025-05-22 12:22:34,293 - telegram - INFO - Получена информация о канале dva_majors: {'subscribers_count': 1234387, 'views_count': 209025, 'posts_count': 70197}
+2025-05-22 12:22:35,058 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733729, 'views_count': 137540, 'posts_count': 71796}
+2025-05-22 12:22:36,059 - telegram - INFO - Получена информация о канале epoddubny: {'subscribers_count': 699503, 'views_count': 133479, 'posts_count': 22636}
+2025-05-22 12:22:37,537 - telegram - INFO - Получена информация о канале Sladkov_plus: {'subscribers_count': 844398, 'views_count': 246412, 'posts_count': 10701}
+2025-05-22 12:22:38,215 - telegram - INFO - Получена информация о канале milinfolive: {'subscribers_count': 607051, 'views_count': 105219, 'posts_count': 143523}
+2025-05-22 12:22:39,002 - telegram - INFO - Получена информация о канале wargonzo: {'subscribers_count': 925997, 'views_count': 97976, 'posts_count': 25300}
+2025-05-22 12:22:39,842 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558652, 'views_count': 98403, 'posts_count': 52421}
+2025-05-22 12:22:40,953 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3113820, 'views_count': 1598964, 'posts_count': 22671}
+2025-05-22 12:22:42,092 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1262105, 'views_count': 163980, 'posts_count': 68450}
+2025-05-22 12:22:42,799 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733729, 'views_count': 137540, 'posts_count': 71796}
+2025-05-22 12:22:43,692 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 219918, 'views_count': 41575, 'posts_count': 20311}
+2025-05-22 12:22:44,386 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 574421, 'views_count': 185768, 'posts_count': 19243}
+2025-05-22 12:22:45,234 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 446010, 'views_count': 118548, 'posts_count': 27834}
+2025-05-22 12:22:45,996 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558652, 'views_count': 98403, 'posts_count': 52421}
+2025-05-22 12:22:46,700 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1299273, 'views_count': 176458, 'posts_count': 309385}
+2025-05-22 12:22:47,704 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 108353, 'views_count': 372678, 'posts_count': 23258}
+2025-05-22 12:22:48,623 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 399177, 'views_count': 182048, 'posts_count': 3397}
+2025-05-22 12:22:48,635 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-05-22 12:22:49,794 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 542885, 'views_count': 237545, 'posts_count': 18714}
+2025-05-22 12:22:49,800 - telegram - INFO - Обрабатываем канал: dva_majors
+2025-05-22 12:23:56,061 - metrics - INFO - Операция main_process заняла 85.68 сек
+2025-05-22 12:26:37,667 - telegram - INFO - Добавлен канал: @dva_majors
+2025-05-22 12:26:38,242 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 12:26:38,712 - telegram - INFO - Добавлен канал: @epoddubny
+2025-05-22 12:26:38,982 - telegram - INFO - Добавлен канал: @Sladkov_plus
+2025-05-22 12:26:39,132 - telegram - INFO - Добавлен канал: @milinfolive
+2025-05-22 12:26:39,226 - telegram - INFO - Добавлен канал: @wargonzo
+2025-05-22 12:26:39,320 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 12:26:39,414 - telegram - INFO - Добавлен канал: @yurasumy
+2025-05-22 12:26:39,509 - telegram - INFO - Добавлен канал: @rybar
+2025-05-22 12:26:39,615 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 12:26:39,716 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-05-22 12:26:39,817 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-05-22 12:26:39,918 - telegram - INFO - Добавлен канал: @warfakes
+2025-05-22 12:26:40,012 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 12:26:40,110 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-05-22 12:26:40,213 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-05-22 12:26:40,308 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-05-22 12:26:40,401 - telegram - INFO - Добавлен канал: @remedia
+2025-05-22 12:26:40,495 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-05-22 12:26:40,495 - telegram - INFO - Сбор статистики по каналам
+2025-05-22 12:26:41,507 - telegram - INFO - Получена информация о канале dva_majors: {'subscribers_count': 1234391, 'views_count': 209658, 'posts_count': 70197}
+2025-05-22 12:26:42,279 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733728, 'views_count': 137614, 'posts_count': 71796}
+2025-05-22 12:26:43,041 - telegram - INFO - Получена информация о канале epoddubny: {'subscribers_count': 699502, 'views_count': 133529, 'posts_count': 22636}
+2025-05-22 12:26:43,846 - telegram - INFO - Получена информация о канале Sladkov_plus: {'subscribers_count': 844394, 'views_count': 246432, 'posts_count': 10701}
+2025-05-22 12:26:44,689 - telegram - INFO - Получена информация о канале milinfolive: {'subscribers_count': 607050, 'views_count': 104324, 'posts_count': 143524}
+2025-05-22 12:26:45,682 - telegram - INFO - Получена информация о канале wargonzo: {'subscribers_count': 925996, 'views_count': 98048, 'posts_count': 25300}
+2025-05-22 12:26:47,273 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558650, 'views_count': 98464, 'posts_count': 52421}
+2025-05-22 12:26:48,230 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3113829, 'views_count': 1600268, 'posts_count': 22671}
+2025-05-22 12:26:49,324 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1262106, 'views_count': 164057, 'posts_count': 68450}
+2025-05-22 12:26:50,143 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733728, 'views_count': 137618, 'posts_count': 71796}
+2025-05-22 12:26:51,199 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 219918, 'views_count': 41575, 'posts_count': 20311}
+2025-05-22 12:26:51,947 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 574418, 'views_count': 185787, 'posts_count': 19243}
+2025-05-22 12:26:52,780 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 446009, 'views_count': 118630, 'posts_count': 27834}
+2025-05-22 12:26:53,563 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558650, 'views_count': 98468, 'posts_count': 52421}
+2025-05-22 12:26:54,359 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1299271, 'views_count': 177446, 'posts_count': 309385}
+2025-05-22 12:26:55,186 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 108353, 'views_count': 372678, 'posts_count': 23258}
+2025-05-22 12:26:56,032 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 399172, 'views_count': 182057, 'posts_count': 3397}
+2025-05-22 12:26:56,039 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-05-22 12:26:56,778 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 542886, 'views_count': 237604, 'posts_count': 18714}
+2025-05-22 12:26:56,784 - telegram - INFO - Обрабатываем канал: dva_majors
+2025-05-22 12:28:06,495 - metrics - INFO - Операция main_process заняла 90.43 сек
+2025-05-22 12:40:29,317 - telegram - INFO - Добавлен канал: @dva_majors
+2025-05-22 12:40:29,401 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 12:40:29,488 - telegram - INFO - Добавлен канал: @epoddubny
+2025-05-22 12:40:29,571 - telegram - INFO - Добавлен канал: @Sladkov_plus
+2025-05-22 12:40:29,647 - telegram - INFO - Добавлен канал: @milinfolive
+2025-05-22 12:40:29,724 - telegram - INFO - Добавлен канал: @wargonzo
+2025-05-22 12:40:29,828 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 12:40:29,950 - telegram - INFO - Добавлен канал: @yurasumy
+2025-05-22 12:40:30,056 - telegram - INFO - Добавлен канал: @rybar
+2025-05-22 12:40:30,150 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 12:40:30,238 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-05-22 12:40:30,331 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-05-22 12:40:30,432 - telegram - INFO - Добавлен канал: @warfakes
+2025-05-22 12:40:30,537 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 12:40:30,642 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-05-22 12:40:30,767 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-05-22 12:40:30,874 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-05-22 12:40:30,968 - telegram - INFO - Добавлен канал: @remedia
+2025-05-22 12:40:31,083 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-05-22 12:40:31,084 - telegram - INFO - Сбор статистики по каналам
+2025-05-22 12:40:32,048 - telegram - INFO - Получена информация о канале dva_majors: {'subscribers_count': 1234373, 'views_count': 208921, 'posts_count': 70198}
+2025-05-22 12:40:32,744 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733723, 'views_count': 137853, 'posts_count': 71796}
+2025-05-22 12:40:33,481 - telegram - INFO - Получена информация о канале epoddubny: {'subscribers_count': 699497, 'views_count': 133683, 'posts_count': 22636}
+2025-05-22 12:40:34,234 - telegram - INFO - Получена информация о канале Sladkov_plus: {'subscribers_count': 844377, 'views_count': 241686, 'posts_count': 10703}
+2025-05-22 12:40:34,942 - telegram - INFO - Получена информация о канале milinfolive: {'subscribers_count': 607048, 'views_count': 104845, 'posts_count': 143524}
+2025-05-22 12:40:36,042 - telegram - INFO - Получена информация о канале wargonzo: {'subscribers_count': 925985, 'views_count': 98269, 'posts_count': 25300}
+2025-05-22 12:40:37,597 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558679, 'views_count': 98781, 'posts_count': 52421}
+2025-05-22 12:40:38,877 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3113839, 'views_count': 1604104, 'posts_count': 22671}
+2025-05-22 12:40:39,946 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1262096, 'views_count': 162828, 'posts_count': 68451}
+2025-05-22 12:40:40,652 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733723, 'views_count': 137856, 'posts_count': 71796}
+2025-05-22 12:40:41,433 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 219918, 'views_count': 41578, 'posts_count': 20311}
+2025-05-22 12:40:42,229 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 574404, 'views_count': 184532, 'posts_count': 19244}
+2025-05-22 12:40:43,100 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 446007, 'views_count': 119043, 'posts_count': 27834}
+2025-05-22 12:40:43,876 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558678, 'views_count': 98785, 'posts_count': 52421}
+2025-05-22 12:40:44,594 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1299272, 'views_count': 176396, 'posts_count': 309387}
+2025-05-22 12:40:45,377 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 108353, 'views_count': 372678, 'posts_count': 23258}
+2025-05-22 12:40:46,193 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 399169, 'views_count': 182085, 'posts_count': 3397}
+2025-05-22 12:40:46,200 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-05-22 12:40:46,901 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 542880, 'views_count': 237770, 'posts_count': 18714}
+2025-05-22 12:40:46,921 - telegram - INFO - Обрабатываем канал: dva_majors
+2025-05-22 12:52:08,609 - metrics - INFO - Операция main_process заняла 699.86 сек
+2025-05-22 13:04:03,333 - telegram - INFO - Добавлен канал: @dva_majors
+2025-05-22 13:04:03,431 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 13:04:03,525 - telegram - INFO - Добавлен канал: @epoddubny
+2025-05-22 13:04:03,624 - telegram - INFO - Добавлен канал: @Sladkov_plus
+2025-05-22 13:04:03,720 - telegram - INFO - Добавлен канал: @milinfolive
+2025-05-22 13:04:03,815 - telegram - INFO - Добавлен канал: @wargonzo
+2025-05-22 13:04:03,919 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 13:04:04,025 - telegram - INFO - Добавлен канал: @yurasumy
+2025-05-22 13:04:04,131 - telegram - INFO - Добавлен канал: @rybar
+2025-05-22 13:04:04,260 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 13:04:04,375 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-05-22 13:04:04,484 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-05-22 13:04:04,592 - telegram - INFO - Добавлен канал: @warfakes
+2025-05-22 13:04:04,690 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 13:04:04,792 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-05-22 13:04:04,896 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-05-22 13:04:05,020 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-05-22 13:04:05,121 - telegram - INFO - Добавлен канал: @remedia
+2025-05-22 13:04:05,228 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-05-22 13:04:05,228 - telegram - INFO - Сбор статистики по каналам
+2025-05-22 13:04:06,288 - telegram - INFO - Получена информация о канале dva_majors: {'subscribers_count': 1234349, 'views_count': 200577, 'posts_count': 70203}
+2025-05-22 13:04:06,289 - telegram - ERROR - Ошибка при получении информации о канале dva_majors: no such table: channel_stats
+2025-05-22 13:04:07,092 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733715, 'views_count': 138350, 'posts_count': 71796}
+2025-05-22 13:04:07,093 - telegram - ERROR - Ошибка при получении информации о канале voenacher: no such table: channel_stats
+2025-05-22 13:04:08,062 - telegram - INFO - Получена информация о канале epoddubny: {'subscribers_count': 699492, 'views_count': 133925, 'posts_count': 22636}
+2025-05-22 13:04:08,063 - telegram - ERROR - Ошибка при получении информации о канале epoddubny: no such table: channel_stats
+2025-05-22 13:04:09,329 - telegram - INFO - Получена информация о канале Sladkov_plus: {'subscribers_count': 844362, 'views_count': 242257, 'posts_count': 10703}
+2025-05-22 13:04:09,330 - telegram - ERROR - Ошибка при получении информации о канале Sladkov_plus: no such table: channel_stats
+2025-05-22 13:04:10,150 - telegram - INFO - Получена информация о канале milinfolive: {'subscribers_count': 607050, 'views_count': 103618, 'posts_count': 143526}
+2025-05-22 13:04:10,150 - telegram - ERROR - Ошибка при получении информации о канале milinfolive: no such table: channel_stats
+2025-05-22 13:04:11,468 - telegram - INFO - Получена информация о канале wargonzo: {'subscribers_count': 925983, 'views_count': 98594, 'posts_count': 25300}
+2025-05-22 13:04:11,469 - telegram - ERROR - Ошибка при получении информации о канале wargonzo: no such table: channel_stats
+2025-05-22 13:04:12,418 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558720, 'views_count': 98429, 'posts_count': 52422}
+2025-05-22 13:04:12,419 - telegram - ERROR - Ошибка при получении информации о канале sashakots: no such table: channel_stats
+2025-05-22 13:04:13,444 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3113857, 'views_count': 1609285, 'posts_count': 22671}
+2025-05-22 13:04:13,444 - telegram - ERROR - Ошибка при получении информации о канале yurasumy: no such table: channel_stats
+2025-05-22 13:04:15,104 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1262073, 'views_count': 163524, 'posts_count': 68451}
+2025-05-22 13:04:15,105 - telegram - ERROR - Ошибка при получении информации о канале rybar: no such table: channel_stats
+2025-05-22 13:04:16,558 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733715, 'views_count': 138355, 'posts_count': 71796}
+2025-05-22 13:04:16,559 - telegram - ERROR - Ошибка при получении информации о канале voenacher: no such table: channel_stats
+2025-05-22 13:04:17,730 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 219918, 'views_count': 41584, 'posts_count': 20311}
+2025-05-22 13:04:17,730 - telegram - ERROR - Ошибка при получении информации о канале vladlentatarsky: no such table: channel_stats
+2025-05-22 13:04:18,527 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 574402, 'views_count': 184875, 'posts_count': 19244}
+2025-05-22 13:04:18,528 - telegram - ERROR - Ошибка при получении информации о канале vysokygovorit: no such table: channel_stats
+2025-05-22 13:04:20,380 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 446002, 'views_count': 117350, 'posts_count': 27836}
+2025-05-22 13:04:20,381 - telegram - ERROR - Ошибка при получении информации о канале warfakes: no such table: channel_stats
+2025-05-22 13:04:21,251 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558720, 'views_count': 98438, 'posts_count': 52422}
+2025-05-22 13:04:21,256 - telegram - ERROR - Ошибка при получении информации о канале sashakots: no such table: channel_stats
+2025-05-22 13:04:22,004 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1299270, 'views_count': 180094, 'posts_count': 309387}
+2025-05-22 13:04:22,005 - telegram - ERROR - Ошибка при получении информации о канале SolovievLive: no such table: channel_stats
+2025-05-22 13:04:22,825 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 108353, 'views_count': 372678, 'posts_count': 23258}
+2025-05-22 13:04:22,825 - telegram - ERROR - Ошибка при получении информации о канале kremlinprachka: no such table: channel_stats
+2025-05-22 13:04:23,619 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 399168, 'views_count': 182128, 'posts_count': 3397}
+2025-05-22 13:04:23,620 - telegram - ERROR - Ошибка при получении информации о канале aleksandr_skif: no such table: channel_stats
+2025-05-22 13:04:23,620 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-05-22 13:04:24,360 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 542876, 'views_count': 235567, 'posts_count': 18715}
+2025-05-22 13:04:24,360 - telegram - ERROR - Ошибка при получении информации о канале fighter_bomber: no such table: channel_stats
+2025-05-22 13:04:24,360 - telegram - INFO - Обрабатываем канал: dva_majors
+2025-05-22 13:05:41,824 - metrics - INFO - Операция main_process заняла 100.21 сек
+2025-05-22 13:05:42,001 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<MTProtoSender._recv_loop() done, defined at C:\Users\Пользователь\PycharmProjects\krauler\.venv\lib\site-packages\telethon\network\mtprotosender.py:497> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\Пользователь\PycharmProjects\krauler\main.py", line 109, in <module>
+    asyncio.run(main_async())
+  File "C:\Users\Пользователь\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\Пользователь\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 628, in run_until_complete
+    self.run_forever()
+  File "C:\Users\Пользователь\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\Пользователь\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+  File "C:\Users\Пользователь\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+  File "C:\Users\Пользователь\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Пользователь\PycharmProjects\krauler\.venv\lib\site-packages\telethon\network\mtprotosender.py", line 528, in _recv_loop
+    message = self._state.decrypt_message_data(body)
+  File "C:\Users\Пользователь\PycharmProjects\krauler\.venv\lib\site-packages\telethon\network\mtprotostate.py", line 167, in decrypt_message_data
+    body = AES.decrypt_ige(body[24:], aes_key, aes_iv)
+  File "C:\Users\Пользователь\PycharmProjects\krauler\.venv\lib\site-packages\telethon\crypto\aes.py", line 59, in decrypt_ige
+    plain_text_block = aes.decrypt(cipher_text_block)
+KeyboardInterrupt
+2025-05-22 13:05:52,743 - telegram - INFO - Добавлен канал: @dva_majors
+2025-05-22 13:05:52,910 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 13:05:53,062 - telegram - INFO - Добавлен канал: @epoddubny
+2025-05-22 13:05:53,215 - telegram - INFO - Добавлен канал: @Sladkov_plus
+2025-05-22 13:05:53,357 - telegram - INFO - Добавлен канал: @milinfolive
+2025-05-22 13:05:53,477 - telegram - INFO - Добавлен канал: @wargonzo
+2025-05-22 13:05:53,563 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 13:05:53,647 - telegram - INFO - Добавлен канал: @yurasumy
+2025-05-22 13:05:53,728 - telegram - INFO - Добавлен канал: @rybar
+2025-05-22 13:05:53,828 - telegram - INFO - Добавлен канал: @voenacher
+2025-05-22 13:05:53,913 - telegram - INFO - Добавлен канал: @vladlentatarsky
+2025-05-22 13:05:54,019 - telegram - INFO - Добавлен канал: @vysokygovorit
+2025-05-22 13:05:54,145 - telegram - INFO - Добавлен канал: @warfakes
+2025-05-22 13:05:54,261 - telegram - INFO - Добавлен канал: @sashakots
+2025-05-22 13:05:54,370 - telegram - INFO - Добавлен канал: @SolovievLive
+2025-05-22 13:05:54,454 - telegram - INFO - Добавлен канал: @kremlinprachka
+2025-05-22 13:05:54,593 - telegram - INFO - Добавлен канал: @aleksandr_skif
+2025-05-22 13:05:54,690 - telegram - INFO - Добавлен канал: @remedia
+2025-05-22 13:05:54,777 - telegram - INFO - Добавлен канал: @fighter_bomber
+2025-05-22 13:05:54,778 - telegram - INFO - Сбор статистики по каналам
+2025-05-22 13:05:55,684 - telegram - INFO - Получена информация о канале dva_majors: {'subscribers_count': 1234351, 'views_count': 194338, 'posts_count': 70204}
+2025-05-22 13:05:56,478 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733716, 'views_count': 138372, 'posts_count': 71796}
+2025-05-22 13:05:57,257 - telegram - INFO - Получена информация о канале epoddubny: {'subscribers_count': 699492, 'views_count': 133943, 'posts_count': 22636}
+2025-05-22 13:05:58,030 - telegram - INFO - Получена информация о канале Sladkov_plus: {'subscribers_count': 844362, 'views_count': 242281, 'posts_count': 10703}
+2025-05-22 13:05:58,815 - telegram - INFO - Получена информация о канале milinfolive: {'subscribers_count': 607054, 'views_count': 103710, 'posts_count': 143526}
+2025-05-22 13:05:59,638 - telegram - INFO - Получена информация о канале wargonzo: {'subscribers_count': 925982, 'views_count': 98614, 'posts_count': 25300}
+2025-05-22 13:06:00,494 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558722, 'views_count': 98469, 'posts_count': 52422}
+2025-05-22 13:06:01,668 - telegram - INFO - Получена информация о канале yurasumy: {'subscribers_count': 3113859, 'views_count': 1609656, 'posts_count': 22671}
+2025-05-22 13:06:02,765 - telegram - INFO - Получена информация о канале rybar: {'subscribers_count': 1262073, 'views_count': 163561, 'posts_count': 68451}
+2025-05-22 13:06:03,488 - telegram - INFO - Получена информация о канале voenacher: {'subscribers_count': 733716, 'views_count': 138376, 'posts_count': 71796}
+2025-05-22 13:06:04,447 - telegram - INFO - Получена информация о канале vladlentatarsky: {'subscribers_count': 219918, 'views_count': 41584, 'posts_count': 20311}
+2025-05-22 13:06:05,194 - telegram - INFO - Получена информация о канале vysokygovorit: {'subscribers_count': 574402, 'views_count': 184890, 'posts_count': 19244}
+2025-05-22 13:06:06,050 - telegram - INFO - Получена информация о канале warfakes: {'subscribers_count': 446004, 'views_count': 117413, 'posts_count': 27836}
+2025-05-22 13:06:06,794 - telegram - INFO - Получена информация о канале sashakots: {'subscribers_count': 558721, 'views_count': 98469, 'posts_count': 52422}
+2025-05-22 13:06:07,818 - telegram - INFO - Получена информация о канале SolovievLive: {'subscribers_count': 1299271, 'views_count': 180335, 'posts_count': 309387}
+2025-05-22 13:06:09,276 - telegram - INFO - Получена информация о канале kremlinprachka: {'subscribers_count': 108353, 'views_count': 372678, 'posts_count': 23258}
+2025-05-22 13:06:10,094 - telegram - INFO - Получена информация о канале aleksandr_skif: {'subscribers_count': 399168, 'views_count': 182132, 'posts_count': 3397}
+2025-05-22 13:06:10,100 - telegram - ERROR - Ошибка при получении информации о канале None: Cannot cast NoneType to any kind of Peer.
+2025-05-22 13:06:10,897 - telegram - INFO - Получена информация о канале fighter_bomber: {'subscribers_count': 542874, 'views_count': 235612, 'posts_count': 18715}
+2025-05-22 13:06:10,902 - telegram - INFO - Обрабатываем канал: dva_majors
+2025-05-22 13:06:20,606 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71712.mp4
+2025-05-22 13:21:03,350 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71706.mp4
+2025-05-22 13:22:21,422 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71703.mp4
+2025-05-22 13:24:04,611 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71702.mp4
+2025-05-22 13:25:52,923 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71701.mp4
+2025-05-22 13:29:30,833 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71694.mp4
+2025-05-22 13:29:52,637 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71690.mp4
+2025-05-22 13:35:08,656 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71688.mp4
+2025-05-22 13:39:09,546 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71686.mp4
+2025-05-22 13:49:42,836 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71684.mp4
+2025-05-22 13:53:52,096 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71683.mp4
+2025-05-22 13:58:28,235 - telegram - INFO - Сохранено: downloaded_videos\dva_majors_71682.mp4
+2025-05-22 14:15:19,229 - metrics - INFO - Операция main_process заняла 4167.46 сек
